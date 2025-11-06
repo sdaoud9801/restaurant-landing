@@ -1,0 +1,251 @@
+html {
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    opacity: 0.95;
+    font-weight: bold;
+}
+
+.nav__logo {
+    height: 100px;
+}
+
+.nav__link {
+    display: inline-block;
+    width: 5rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+}
+
+.nav__link:hover {
+    background-color: black;
+    color: white;
+}
+
+.hero {
+    height: 500px;
+    background-image: url('../assets/rafael-hoyos-weht-Aqot8S_Keb8-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.hero__header {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.hero__subheader {
+    max-width: 80%;
+    text-align: center;
+}
+
+.hero__cta {
+    background-color: white;
+    width: 10rem;
+    height: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding: 10px;
+    border-radius: 2px;
+    opacity: 0;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    animation-name: appear;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    transition-property: background-color, color;
+    transition-duration: 0.3s, 0.3s;
+}
+
+.hero__cta:hover {
+    background-color: black;
+    color: white;
+}
+
+.about {
+    background-image: url('../assets/noisy-background.jpg');
+}
+
+.about__imgcontainer {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__img {
+    width: 100%;
+    border-radius: 20px;
+    max-width: 400px;
+}
+
+.about__textcontainer {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.about__text {
+    max-width: 400px;
+    padding: 30px;
+}
+
+.about__header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.visit {
+    background-image: url('../assets/noisy-background.jpg');
+}
+
+.visit__imgcontainer {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visit__textcontainer {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.visit__img {
+    width: 100%;
+    border-radius: 20px;
+    max-width: 400px;
+    ;
+}
+
+.visit__text {
+    max-width: 400px;
+    padding: 30px;
+}
+
+.visit__header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-image: url('../assets/noisy-background.jpg');
+}
+
+.footer {
+    background-color: rgba(1,1,1, 0.2);
+    padding: 30px;
+}
+
+.footer__logo {
+    width: 50%;
+
+}
+
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        margin-top: 50px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 20px;
+    }
+}
+
+
+
+@media screen and (min-width: 700px) {
+    html {
+        font-size: 20px;
+    }
+
+    .about {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .about__img {
+        max-width: 600px;
+    }
+
+    .about__textcontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .visit {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .visit__img {
+        max-width: 600px;
+    }
+
+    .visit__textcontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 0;
+    }
+
+    .visit__imgcontainer {
+        order: 1;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    html {
+        font-size: 24px;
+    }
+
+    .about {
+        padding: 30px 100px;
+    }
+
+    .visit {
+        padding: 30px 100px;
+    }
+
+    .footer {
+        padding: 30px 100px;
+    }
+}
